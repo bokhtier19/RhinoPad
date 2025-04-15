@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import noteRoutes from "./routes/noteRoutes.js";
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 dotenv.config();
 
 app.use(cors());

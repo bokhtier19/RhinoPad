@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URI = "http://localhost:5000/api/notes";
+const API_URI = "https://rhinopad-backend.onrender.com/api/notes";
 
 export const getNotes = async () => {
     try {
