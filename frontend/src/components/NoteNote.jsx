@@ -65,12 +65,8 @@ const NoteNote = ({ notes, refreshNotes, darkMode, searchTerm }) => {
                         variants={containerVariants}
                         viewport={{ once: true }}
                         className={`
-                            ${selectedNote ? "hidden md:grid" : "grid"}
+                            ${selectedNote ? "hidden md:grid grid-cols-2" : "grid md:grid-cols-4"}
                             gap-2
-                            grid-cols-1
-                            sm:grid-cols-2
-                            md:${selectedNote ? "grid-cols-2" : "grid-cols-3"}
-                            lg:${selectedNote ? "grid-cols-2" : "grid-cols-4"}
                             flex-1
                         `}
                     >
