@@ -58,7 +58,7 @@ const Viewnote = ({ selectedNote, onclose, refreshNotes, darkMode }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className={`flex flex-col items-center justify-center w-full gap-6 p-4 px-8 leading-5 tracking-wider text-justify border rounded-2xl ${darkMode ? "bg-white" : ""}`}
+                    className={`flex flex-col items-center justify-center w-full gap-6 p-4 md:px-8 leading-5 tracking-wider text-justify border rounded-2xl ${darkMode ? "bg-white" : ""}`}
                 >
                     <input
                         type="text"

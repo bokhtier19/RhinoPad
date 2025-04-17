@@ -41,14 +41,14 @@ const Write = ({ refreshNotes, darkMode }) => {
                 stiffness: 100,
             }}
             onSubmit={handleAddNote}
-            className={`flex flex-col w-1/3 gap-2 p-4 mx-auto my-8 border  shadow-md rounded-xl ${darkMode ? "bg-white text-black border-gray-700" : "bg-[#202124] text-white border-gray-500"}`}
+            className={`flex flex-col w-[90%] md:w-1/3 gap-2 p-2 my-8 border  shadow-md rounded-xl ${darkMode ? "bg-white text-black border-gray-700" : "bg-[#202124] text-white border-gray-500"}`}
         >
             <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Title..."
-                className={`w-full p-2 border-none outline-none ${
+                className={`w-full p-1 border-none outline-none ${
                     darkMode ? "bg-white text-black border-gray-700 placeholder-gray-700" : "bg-[#202124] text-white border-gray-500 placeholder-gray-200"
                 }`}
             />
@@ -60,7 +60,7 @@ const Write = ({ refreshNotes, darkMode }) => {
                     setContent(e.target.value);
                     resizeTextarea();
                 }}
-                rows={2}
+                rows={1}
                 placeholder="Notes..."
                 className={`w-full p-2 border-none outline-none ${darkMode ? "bg-white text-black border-gray-700 placeholder-gray-700" : "bg-[#202124] placeholder-white text-white border-gray-500"}`}
             />

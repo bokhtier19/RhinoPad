@@ -9,13 +9,19 @@ import { FaSearch } from "react-icons/fa";
 const Navbar = ({ darkMode, setDarkMode, fetchNotes, searchTerm, setSearchTerm }) => {
     return (
         <>
-            <div className={`sticky top-0 z-50 flex items-center justify-around py-4 text-white shadow-md ${darkMode ? "bg-blue-500" : "bg-[#202124]"}`}>
+            <div className={`sticky top-0 z-50 flex flex-col md:flex-row gap-1 md:gap-4 items-center justify-around py-1 md:py-4 text-white shadow-md ${darkMode ? "bg-blue-500" : "bg-[#202124]"}`}>
                 <div className="flex items-center gap-2">
                     <GiRhinocerosHorn size={20} />
                     <p className="text-2xl font-bold uppercase">RhinoPad</p>
                 </div>
                 <div className="flex items-center gap-2 px-2 text-black bg-white rounded-2xl">
-                    <input type="text" className="px-6 py-2 text-black border-none rounded outline-none" placeholder="search..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                    <input
+                        type="text"
+                        className="px-6 py-1 text-black border-none rounded outline-none md:py-2"
+                        placeholder="search..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
                     <FaSearch size={20} />
                 </div>
                 <div className="flex items-center gap-4 ">
